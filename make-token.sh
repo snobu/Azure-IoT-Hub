@@ -50,10 +50,10 @@ decoded_hex_key=$(printf %b "$sas_key" | base64 -d -w0 | xxd -p -c256)
 signature=$(printf %b "$string_to_sign" | openssl dgst -sha256 -mac HMAC -macopt "hexkey:$decoded_hex_key" -binary | base64 -w0)
 
 # URLencode computed HMAC signature
-sig_req_url_encoded=$(urlencodesafe $signature)
+sig_urlencoded=$(urlencodesafe $signature)
 
 # Print Authorization header
-authorization_header="Authorization: $authorization sr=$req_url_encoded&sig=$sig_req_url_encoded&se=$expiry&skn=$sas_name"
+authorization_header="Authorization: $authorization sr=$req_url_encoded&sig=$sig_urlencoded&se=$expiry&skn=$sas_name"
 
 echo -e "\n$authorization_header\n"
 
