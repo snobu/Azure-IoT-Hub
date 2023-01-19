@@ -10,7 +10,9 @@
 #    SharedAccessSignature sig={signature-string}&se={expiry}&skn={policyName}&sr={URL-encoded-resourceURI}
 #
 # Author:
-#    Adrian Calinescu (a-adcali@microsoft.com), Twitter: @evilSnobu, github.com/snobu
+#    Adrian Calinescu
+#    @evilSnobu on Twitter
+#    https://github.com/snobu
 #
 # Many things borrowed from:
 #    http://stackoverflow.com/questions/20103258/accessing-azure-blob-storage-using-bash-curl
